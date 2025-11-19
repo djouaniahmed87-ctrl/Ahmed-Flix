@@ -3,96 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقع أفلام 2025</title>
+  <title>أفلام 2025</title>
   <style>
-    body { margin:0; font-family: Tahoma, sans-serif; background:#07070a; color:#fff; }
-    header { background:#111; padding:20px; text-align:center; }
-    header img { width:120px; margin-bottom:10px; border-radius:10px; }
-    header h1 { color:#e50914; margin:5px 0; font-size:2em; }
-    header p { color:#ccc; font-size:1.1em; }
-    nav { text-align:center; margin:10px 0; }
-    nav a { display:inline-block; margin:0 10px; padding:10px 20px; background:#e50914; color:#fff; border-radius:6px; text-decoration:none; font-weight:bold; }
-    
-    /* شريط البحث */
-    .search-container { text-align:center; margin:20px 0; }
-    .search-container input[type="text"] { width:250px; padding:8px 12px; border-radius:6px; border:none; font-size:1em; }
-    .search-container button { padding:8px 12px; border:none; border-radius:6px; background:#e50914; color:#fff; font-weight:bold; cursor:pointer; }
-    
-    /* شبكة عرض الأفلام */
-    .movies-container { max-width:1200px; margin:20px auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; padding:10px; }
-    .movie-card { background:#111; border-radius:10px; overflow:hidden; text-align:center; transition: transform 0.3s; }
-    .movie-card:hover { transform: scale(1.05); }
-    .movie-card img { width:100%; display:block; }
-    .movie-card h3 { color:#e50914; margin:10px 0; font-size:1.1em; }
-    .movie-card button, .movie-card a { display:inline-block; margin:5px 5px; padding:6px 12px; background:#e50914; color:#fff; border-radius:6px; text-decoration:none; font-weight:bold; cursor:pointer; }
-    
-    /* iframe صغير للتريلر */
-    .trailer { width:100%; height:150px; border:none; border-radius:6px; margin-bottom:5px; }
-
-    footer { text-align:center; padding:20px; background:#111; color:#888; margin-top:40px; }
+    body { margin:0; font-family:Tahoma, sans-serif; background:#07070a; color:#fff; }
+    header { background:#111; padding:15px 20px; display:flex; align-items:center; }
+    header img { height:50px; margin-left:15px; }
+    header h1 { color:#e50914; margin:0; font-size:1.8em; }
+    nav { background:#1a1a1a; padding:10px 20px; display:flex; justify-content:flex-start; align-items:center; }
+    nav input[type="text"] { flex:1; padding:8px; border-radius:5px; border:none; margin-left:10px; }
+    nav button { padding:8px 12px; background:#e50914; border:none; color:#fff; border-radius:5px; cursor:pointer; }
+    .banner { background-image:url('banner.jpg'); background-size:cover; background-position:center; height:250px; display:flex; align-items:center; justify-content:center; text-align:center; }
+    .banner h2 { background-color: rgba(0,0,0,0.5); padding:10px 15px; border-radius:5px; }
+    .movies-container { max-width:1200px; margin:20px auto; display:grid; grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); gap:20px; }
+    .movie { background:#111; border-radius:10px; overflow:hidden; text-align:center; padding:10px; }
+    .movie img { width:100%; border-radius:10px; }
+    .movie h3 { color:#e50914; margin:10px 0; }
+    .movie p { color:#ccc; font-size:0.9em; line-height:1.4; }
+    .movie .btn { display:inline-block; margin:10px 0; padding:8px 14px; background:#e50914; color:#fff; border-radius:5px; text-decoration:none; font-weight:bold; }
+    footer { text-align:center; padding:15px; background:#111; color:#888; margin-top:30px; }
   </style>
 </head>
 <body>
 
+<!-- شعار الموقع -->
 <header>
-  <img src="https://via.placeholder.com/120x60?text=Logo" alt="شعار الموقع">
-  <h1>🎬 موقع أفلام 2025</h1>
-  <p>أحدث الأفلام والتريلرات لعام 2025</p>
+  <img src="logo.png" alt="شعار الموقع">
+  <h1>أفلام 2025</h1>
 </header>
 
+<!-- شريط البحث -->
 <nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="movies.html">جميع الأفلام</a>
-  <a href="series.html">المسلسلات</a>
-  <a href="about.html">حول الموقع</a>
+  <input type="text" placeholder="ابحث عن فيلم...">
+  <button>بحث</button>
 </nav>
 
-<div class="search-container">
-  <input type="text" placeholder="ابحث عن فيلم أو مسلسل...">
-  <button>بحث</button>
+<!-- بانر كبير -->
+<div class="banner">
+  <h2>مرحباً بكم في موقع أفلام 2025 🎬</h2>
 </div>
 
-<section class="movies-container">
-  <!-- فيلم 1 -->
-  <div class="movie-card">
+<!-- عرض أول 5 أفلام -->
+<div class="movies-container">
+
+  <div class="movie">
     <img src="https://www.impawards.com/2025/lilo_and_stitch.jpg" alt="Lilo & Stitch 2025">
     <h3>Lilo & Stitch (2025)</h3>
-    <iframe class="trailer" src="https://www.youtube.com/embed/Qn4vxdLZfC8" allowfullscreen></iframe>
-    <a href="movies.html#lilo-stitch">مشاهدة الفيلم الكامل</a>
+    <p>نسخة حديثة (live‑action) من قصة Lilo و Stitch، من إنتاج ديزني عام 2025.</p>
+    <a href="movies.html#lilo-stitch" class="btn">مشاهدة الفيلم كامل</a>
   </div>
 
-  <!-- فيلم 2 -->
-  <div class="movie-card">
+  <div class="movie">
     <img src="https://www.impawards.com/2025/minecraft_the_movie.html" alt="A Minecraft Movie 2025">
     <h3>A Minecraft Movie (2025)</h3>
-    <iframe class="trailer" src="https://www.youtube.com/embed/P9s-FBvB2y4" allowfullscreen></iframe>
-    <a href="movies.html#minecraft-movie">مشاهدة الفيلم الكامل</a>
+    <p>فيلم مغامرة فانتازيا حي مستوحى من لعبة ماينكرافت، بطولة Jason Momoa و Jack Black.</p>
+    <a href="movies.html#minecraft-movie" class="btn">مشاهدة الفيلم كامل</a>
   </div>
 
-  <!-- فيلم 3 -->
-  <div class="movie-card">
+  <div class="movie">
     <img src="https://www.impawards.com/2025/mickey_oneseven_ver17.html" alt="Mickey 17 2025">
-    <h3>Mickey 17 (2025)</h3>
-    <iframe class="trailer" src="https://www.youtube.com/embed/if86N7GVWc0" allowfullscreen></iframe>
-    <a href="movies.html#mickey-17">مشاهدة الفيلم الكامل</a>
+    <h3>Mickey 17 (2025)</h3>
+    <p>فيلم خيال علمي كوميدي حول نسخة مستنسخة من ميكي تُرسل في مهمات خطيرة.</p>
+    <a href="movies.html#mickey-17" class="btn">مشاهدة الفيلم كامل</a>
   </div>
 
-  <!-- فيلم 4 -->
-  <div class="movie-card">
+  <div class="movie">
     <img src="https://www.impawards.com/2025/mission_impossible__the_final_reckoning.html" alt="Mission: Impossible 2025">
     <h3>Mission: Impossible – The Final Reckoning (2025)</h3>
-    <iframe class="trailer" src="https://www.youtube.com/embed/fsQgc9pCyDU" allowfullscreen></iframe>
-    <a href="movies.html#mission-impossible">مشاهدة الفيلم الكامل</a>
+    <p>فيلم أكشن وجاسوسية من سلسلة Mission: Impossible، بطولة Tom Cruise.</p>
+    <a href="movies.html#mission-impossible" class="btn">مشاهدة الفيلم كامل</a>
   </div>
 
-  <!-- فيلم 5 -->
-  <div class="movie-card">
+  <div class="movie">
     <img src="https://m.media-amazon.com/images/M/MV5BZmI5ZGFm.jpg" alt="M3GAN 2.0 2025">
     <h3>M3GAN 2.0 (2025)</h3>
-    <iframe class="trailer" src="https://www.youtube.com/embed/IYLHdEzsk1s" allowfullscreen></iframe>
-    <a href="movies.html#m3gan-2">مشاهدة الفيلم الكامل</a>
+    <p>استمرار قصة الدمية M3GAN في إصدار 2025 مع الكثير من الرعب والتكنولوجيا.</p>
+    <a href="movies.html#m3gan-2" class="btn">مشاهدة الفيلم كامل</a>
   </div>
-</section>
+
+</div>
 
 <footer>
   جميع الحقوق محفوظة © 2025 Ahmed Djouani
