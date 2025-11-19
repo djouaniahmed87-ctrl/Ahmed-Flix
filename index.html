@@ -5,158 +5,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>أفلام 2025</title>
   <style>
-    body { margin:0; font-family:Tahoma, sans-serif; background:#07070a; color:#fff; }
-    header { display:flex; align-items:center; justify-content:space-between; padding:10px 20px; background:#111; }
-    header img { height:50px; }
-    header .title { font-size:1.5em; color:#e50914; font-weight:bold; }
-    nav { display:flex; align-items:center; justify-content:center; background:#1a1a1a; padding:10px 20px; position:relative; }
-    nav input[type="text"] { flex:1; padding:8px; border-radius:5px; border:none; margin-left:10px; }
-    nav button { padding:8px 12px; background:#e50914; border:none; color:#fff; border-radius:5px; cursor:pointer; }
-    .banner { background-image:url('cinema-2025-banner (1).jpg'); background-size:cover; background-position:center; height:200px; display:flex; align-items:center; justify-content:center; }
-    .banner h2 { background-color: rgba(0,0,0,0.5); padding:10px 15px; border-radius:5px; }
-    .movies-grid { display:grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap:20px; max-width:1200px; margin:20px auto; }
-    .movie-card { position:relative; background:#111; border-radius:10px; overflow:hidden; text-align:center; }
-    .movie-card img { width:100%; display:block; }
-    .overlay { position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.6); color:#fff; padding:10px; }
-    .overlay h3 { margin:5px 0; color:#e50914; }
-    .overlay p { margin:5px 0; font-size:0.9em; color:#ccc; }
-    .overlay .btn { display:inline-block; margin:5px 5px 0 5px; padding:6px 12px; background:#e50914; color:#fff; border-radius:5px; text-decoration:none; font-weight:bold; }
-    footer { text-align:center; padding:15px; background:#111; color:#888; margin-top:30px; }
-    @media (max-width:600px){
-      nav { flex-direction:column; }
-      nav input[type="text"] { margin:10px 0 0 0; width:100%; }
+    body {
+      margin: 0;
+      font-family: Tahoma, sans-serif;
+      background: #07070a;
+      color: #fff;
+    }
+
+    /* شريط التنقل */
+    header {
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+    }
+    header .site-title {
+      color: #e50914;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    header .user-name {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    /* شريط البحث */
+    .search-banner {
+      position: relative;
+      background-image: url('cinema-2025-banner (1).jpg');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .search-banner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .search-banner h2 {
+      color: #fff;
+      margin: 0 0 15px 0;
+      z-index: 1;
+    }
+    .search-banner .search-box {
+      z-index: 1;
+      display: flex;
+      max-width: 600px;
+      width: 100%;
+    }
+    .search-banner input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px 0 0 5px;
+      border: none;
+      font-size: 1em;
+    }
+    .search-banner button {
+      padding: 10px 15px;
+      background: #e50914;
+      border: none;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* معرض الأفلام */
+    .movies-container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .movie {
+      background: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 250px;
+      text-align: center;
+      padding: 10px;
+    }
+    .movie img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .movie h3 {
+      color: #e50914;
+      margin: 10px 0;
+    }
+    .movie p {
+      color: #ccc;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+    .movie .btn {
+      display: inline-block;
+      margin: 5px 5px 0 5px;
+      padding: 8px 12px;
+      background: #e50914;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      color: #888;
+      margin-top: 30px;
+    }
+
+    @media(max-width: 768px){
+      .search-banner {
+        height: 200px;
+      }
+      .movies-container {
+        gap: 15px;
+      }
+      .movie {
+        width: 45%;
+      }
+    }
+
+    @media(max-width: 480px){
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .movie {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
 
+<!-- شريط التنقل -->
 <header>
-  <img src="movies-2025-logo (2).png" alt="شعار الموقع">
-  <div class="title">AhmedFlix</div>
+  <img src="movies-2025-logo (2).png" alt="Logo">
+  <div class="site-title">أفلام 2025</div>
+  <div class="user-name">Ahmed Felix</div>
 </header>
 
-<nav>
-  <input type="text" placeholder="ابحث عن فيلم...">
-  <button>بحث</button>
-</nav>
-
-<div class="banner">
+<!-- بانر مع شريط البحث -->
+<div class="search-banner">
   <h2>مرحباً بكم في موقع أفلام 2025 🎬</h2>
+  <div class="search-box">
+    <input type="text" placeholder="ابحث عن فيلم...">
+    <button>بحث</button>
+  </div>
 </div>
 
-<div class="movies-grid">
-
-  <!-- مثال على فيلم -->
-  <div class="movie-card">
-    <img src="imeges/lilo_and_stitch.jpg" alt="Lilo & Stitch">
-    <div class="overlay">
-      <h3>Lilo & Stitch (2025)</h3>
-      <p>نسخة حديثة من قصة Lilo و Stitch، من إنتاج ديزني 2025.</p>
-      <a href="movies.html#lilo-stitch" class="btn">مشاهدة</a>
-      <a href="movies.html#lilo-stitch" class="btn">تحميل</a>
-    </div>
+<!-- معرض الأفلام -->
+<div class="movies-container">
+  <div class="movie">
+    <img src="images/lilo_and_stitch.jpg" alt="Lilo & Stitch">
+    <h3>Lilo & Stitch (2025)</h3>
+    <p>نسخة حديثة من قصة Lilo و Stitch، من إنتاج ديزني 2025.</p>
+    <a href="movies.html#lilo-stitch" class="btn">مشاهدة</a>
+    <a href="movies.html#lilo-stitch" class="btn">تحميل</a>
   </div>
-
-  <div class="movie-card">
-    <img src="imeges/minecraft_the_movie.jpg" alt="A Minecraft Movie">
-    <div class="overlay">
-      <h3>A Minecraft Movie (2025)</h3>
-      <p>مغامرة فانتازيا حي مستوحى من لعبة ماينكرافت.</p>
-      <a href="movies.html#minecraft-movie" class="btn">مشاهدة</a>
-      <a href="movies.html#minecraft-movie" class="btn">تحميل</a>
-    </div>
+  <div class="movie">
+    <img src="images/minecraft_the_movie.jpg" alt="A Minecraft Movie">
+    <h3>A Minecraft Movie (2025)</h3>
+    <p>مغامرة فانتازيا حي مستوحى من لعبة ماينكرافت، بطولة Jason Momoa و Jack Black.</p>
+    <a href="movies.html#minecraft-movie" class="btn">مشاهدة</a>
+    <a href="movies.html#minecraft-movie" class="btn">تحميل</a>
   </div>
-
-  <div class="movie-card">
-    <img src="imeges/mickey_oneseven_ver17.jpg" alt="Mickey 17">
-    <div class="overlay">
-      <h3>Mickey 17 (2025)</h3>
-      <p>فيلم خيال علمي كوميدي حول نسخة مستنسخة من ميكي تُرسل في مهمات خطيرة.</p>
-      <a href="movies.html#mickey-17" class="btn">مشاهدة</a>
-      <a href="movies.html#mickey-17" class="btn">تحميل</a>
-    </div>
+  <div class="movie">
+    <img src="images/mickey_oneseven_ver17.jpg" alt="Mickey 17">
+    <h3>Mickey 17 (2025)</h3>
+    <p>فيلم خيال علمي كوميدي حول نسخة مستنسخة من ميكي تُرسل في مهمات خطيرة.</p>
+    <a href="movies.html#mickey-17" class="btn">مشاهدة</a>
+    <a href="movies.html#mickey-17" class="btn">تحميل</a>
   </div>
-
-  <div class="movie-card">
-    <img src="imeges/mission_impossible__the_final_reckoning.jpg" alt="Mission Impossible">
-    <div class="overlay">
-      <h3>Mission: Impossible – The Final Reckoning (2025)</h3>
-      <p>أكشن وجواسيس، الجزء الأخير لإيثان هانت.</p>
-      <a href="movies.html#mission-impossible" class="btn">مشاهدة</a>
-      <a href="movies.html#mission-impossible" class="btn">تحميل</a>
-    </div>
+  <div class="movie">
+    <img src="images/mission_impossible__the_final_reckoning.jpg" alt="Mission Impossible">
+    <h3>Mission: Impossible – The Final Reckoning (2025)</h3>
+    <p>أكشن وجواسيس، الجزء الأخير لإيثان هانت، بطولة Tom Cruise.</p>
+    <a href="movies.html#mission-impossible" class="btn">مشاهدة</a>
+    <a href="movies.html#mission-impossible" class="btn">تحميل</a>
   </div>
-
-  <div class="movie-card">
-    <img src="imeges/megan_two_point_o_ver2.jpg" alt="M3GAN 2.0">
-    <div class="overlay">
-      <h3>M3GAN 2.0 (2025)</h3>
-      <p>استمرار قصة الدمية M3GAN مع المزيد من الرعب والتكنولوجيا.</p>
-      <a href="movies.html#m3gan-2" class="btn">مشاهدة</a>
-      <a href="movies.html#m3gan-2" class="btn">تحميل</a>
-    </div>
+  <div class="movie">
+    <img src="images/megan_two_point_o_ver2.jpg" alt="M3GAN 2.0">
+    <h3>M3GAN 2.0 (2025)</h3>
+    <p>استمرار قصة الدمية M3GAN مع المزيد من الرعب والتكنولوجيا.</p>
+    <a href="movies.html#m3gan-2" class="btn">مشاهدة</a>
+    <a href="movies.html#m3gan-2" class="btn">تحميل</a>
   </div>
-
-  <div class="movie-card">
-    <img src="imeges/conjuring_last_rites_ver2.jpg" alt="The Conjuring">
-    <div class="overlay">
-      <h3>The Conjuring: Last Rites (2025)</h3>
-      <p>جزء جديد من سلسلة Conjuring مع إد ولورين وارن.</p>
-      <a href="movies.html#conjuring" class="btn">مشاهدة</a>
-      <a href="movies.html#conjuring" class="btn">تحميل</a>
-    </div>
-  </div>
-
-  <div class="movie-card">
-    <img src="imeges/snow_white.jpg" alt="Snow White">
-    <div class="overlay">
-      <h3>Snow White (2025)</h3>
-      <p>إعادة موسيقية خيالية لحكاية سنو وايت من ديزني.</p>
-      <a href="movies.html#snow-white" class="btn">مشاهدة</a>
-      <a href="movies.html#snow-white" class="btn">تحميل</a>
-    </div>
-  </div>
-
-  <div class="movie-card">
-    <img src="imeges/jurassic_world_rebirth.jpg" alt="Jurassic World">
-    <div class="overlay">
-      <h3>Jurassic World Rebirth (2025)</h3>
-      <p>مغامرة ديناصورية جديدة من إنتاج Universal.</p>
-      <a href="movies.html#jurassic-world" class="btn">مشاهدة</a>
-      <a href="movies.html#jurassic-world" class="btn">تحميل</a>
-    </div>
-  </div>
-
-  <div class="movie-card">
-    <img src="imeges/nezha_mo_tong_nao_hai_ver2.jpg" alt="Ne Zha 2">
-    <div class="overlay">
-      <h3>Ne Zha 2 (2025)</h3>
-      <p>فيلم أنيمي صيني مستوحى من الأساطير الصينية.</p>
-      <a href="movies.html#nezha-2" class="btn">مشاهدة</a>
-      <a href="movies.html#nezha-2" class="btn">تحميل</a>
-    </div>
-  </div>
-
-  <div class="movie-card">
-    <img src="imeges/smashing_machine.jpg" alt="The Smashing Machine">
-    <div class="overlay">
-      <h3>The Smashing Machine (2025)</h3>
-      <p>فيلم مغامرة وإثارة متوقع صدوره في 2025.</p>
-      <a href="movies.html#smashing-machine" class="btn">مشاهدة</a>
-      <a href="movies.html#smashing-machine" class="btn">تحميل</a>
-    </div>
-  </div>
-
-  <div class="movie-card">
-    <img src="imeges/wicked_for_good.jpg" alt="Wicked For Good">
-    <div class="overlay">
-      <h3>Wicked: For Good (2025)</h3>
-      <p>فيلم موسيقي وفانتازيا لعام 2025.</p>
-      <a href="movies.html#wicked" class="btn">مشاهدة</a>
-      <a href="movies.html#wicked" class="btn">تحميل</a>
-    </div>
-  </div>
-
 </div>
 
 <footer>
