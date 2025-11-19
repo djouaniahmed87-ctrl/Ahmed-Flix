@@ -3,51 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - أفلام 2025</title>
+  <title>About - Ahmed Flex</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* استبدال خلفية الشعار بالبانر */
+    /* البانر كخلفية للشعار والعنوان */
     header {
       background: url('cinema-2025-banner (1).jpg') no-repeat center center;
       background-size: cover;
-      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 15px 20px;
     }
 
     header img {
       height: 50px;
-      z-index: 2;
-      position: relative;
     }
 
     header h1 {
       color: #fff;
-      margin: 0;
       font-size: 1.8em;
-      z-index: 2;
-      position: relative;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #111;
-      border-radius: 10px;
+    nav {
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    nav .nav-links a {
       color: #fff;
-      line-height: 1.6;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    h2 {
-      color: #e50914;
-      margin-bottom: 15px;
+    nav .search-bar input {
+      padding: 6px 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    nav .search-bar button {
+      padding: 6px 10px;
+      margin-left: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #e50914;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .banner {
+      background: rgba(0,0,0,0.5);
       text-align: center;
+      padding: 60px 15px;
+      color: #fff;
+      font-size: 2em;
+      font-weight: bold;
     }
 
-    p {
-      margin-bottom: 15px;
+    .content-container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+      color: #fff;
+    }
+
+    .content-container h2 {
+      color: #e50914;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .content-container p a {
+      color: #e50914;
+      text-decoration: none;
     }
 
     footer {
@@ -57,26 +91,73 @@
       color: #888;
       margin-top: 30px;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav .nav-links {
+        margin-bottom: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- الشعار والبانر -->
-  <header>
-    <img src="movies-2025-logo (2).png" alt="شعار الموقع">
-    <h1>Ahmed Flex</h1>
-  </header>
+<!-- الشعار والبانر -->
+<header>
+  <img src="movies-2025-logo (2).png" alt="شعار الموقع">
+  <h1>Ahmed Flex</h1>
+</header>
 
-  <main>
-    <h2>من نحن</h2>
-    <p>مرحباً بكم في موقع أفلام 2025، موقع متخصص في عرض أحدث الأفلام والمسلسلات لعام 2025.</p>
-    <p>هدفنا هو توفير معلومات دقيقة عن جميع الأفلام القادمة والحالية، مع إمكانية مشاهدة ومتابعة أحدث التريلرات.</p>
-    <p>فريق العمل يسعى لتقديم تجربة مشاهدة ممتعة وسهلة للمستخدمين مع تحديث مستمر لأحدث الإصدارات.</p>
-  </main>
+<!-- شريط التنقل + البحث -->
+<nav>
+  <div class="nav-links">
+    <a href="index.html">الرئيسية</a>
+    <a href="movies.html">الأفلام</a>
+    <a href="series.html">المسلسلات</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="ابحث...">
+    <button>بحث</button>
+  </div>
+</nav>
 
-  <footer>
-    جميع الحقوق محفوظة © 2025 Ahmed Djouani
-  </footer>
+<!-- بانر نصي -->
+<div class="banner">
+  عن Ahmed Flex
+</div>
+
+<!-- محتوى About -->
+<div class="content-container">
+  <h2>من نحن</h2>
+  <p>
+    Ahmed Flex هو موقع متخصص في تقديم أحدث الأفلام والمسلسلات لعام 2025 بطريقة احترافية وسهلة التصفح. نحن نعمل على توفير تجربة مشاهدة ممتعة مع وصف مفصل لكل فيلم أو مسلسل، وروابط مشاهدة مباشرة وروابط تحميل موثوقة.
+  </p>
+
+  <h2>رؤيتنا</h2>
+  <p>
+    نسعى لتوفير محتوى متجدد وعالي الجودة لعشاق الأفلام والمسلسلات. هدفنا هو أن يجد المستخدم كل ما يبحث عنه من معلومات وعروض وتحديثات على صفحة واحدة بشكل واضح وسهل.
+  </p>
+
+  <h2>فريق العمل</h2>
+  <p>
+    فريق Ahmed Flex يتكون من مجموعة من المحترفين في مجال التقنية والإعلام الرقمي، يعملون على تحديث المحتوى يومياً لضمان تجربة مستخدم مثالية.
+  </p>
+
+  <h2>اتصل بنا</h2>
+  <p>
+    يمكنك التواصل معنا عبر البريد الإلكتروني: <a href="mailto:info@ahmedflex.com">info@ahmedflex.com</a>
+  </p>
+</div>
+
+<footer>
+  جميع الحقوق محفوظة © 2025 Ahmed Flex
+</footer>
 
 </body>
 </html>
