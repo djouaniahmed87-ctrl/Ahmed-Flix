@@ -1,36 +1,68 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>حول الموقع</title>
-<style>
-body { margin:0; font-family:Tahoma, sans-serif; background:#07070a; color:#fff; }
-header { text-align:center; padding:20px; background:#000; }
-header h1 { color:#e50914; }
-nav { text-align:center; margin:20px 0; }
-nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
-nav a:hover { color:#e50914; }
-.container { max-width:900px; margin:0 auto; padding:10px; }
-p { line-height:1.6; color:#ccc; text-align:center; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عن الموقع - Ahmed Flex</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- شريط التنقل -->
 <header>
-  <h1>حول الموقع</h1>
+  <img src="movies-2025-logo (2).png" alt="شعار الموقع" class="logo">
+  <h1>Ahmed Flex</h1>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="movies.html">الأفلام</a>
+    <a href="series.html">المسلسلات</a>
+    <a href="about.html" class="active">About</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="movies.html">الأفلام</a>
-  <a href="series.html">المسلسلات</a>
-  <a href="about.html">حول الموقع</a>
-</nav>
-
-<div class="container">
-  <p>هذا الموقع يعرض أحدث الأفلام والمسلسلات لعام 2025 مع إمكانية مشاهدة التريلرات والانتقال إلى روابط مشاهدة كاملة للفيلم.</p>
+<!-- شريط البحث مع البانر الخلفي -->
+<div class="banner-search" style="background-image:url('cinema-2025-banner (1).jpg');">
+  <div class="search-container">
+    <input type="text" placeholder="ابحث عن فيلم...">
+    <button>بحث</button>
+  </div>
 </div>
+
+<!-- محتوى About -->
+<main class="about-container">
+  <h2>مرحباً بكم في موقع أفلام 2025 🎬</h2>
+  <p>
+    موقع <strong>أفلام 2025</strong> هو وجهتك المفضلة لمتابعة أحدث الأفلام لعام 2025. 
+    نسعى لتقديم تجربة مشاهدة سهلة وسريعة مع معلومات كاملة عن كل فيلم، من 
+    وصف الفيلم، الممثلين، وحتى روابط المشاهدة والتحميل.
+  </p>
+
+  <h3>من نحن</h3>
+  <p>
+    تم تطوير الموقع بواسطة <strong>أحمد فليكس</strong>، بهدف توفير قاعدة بيانات موثوقة لعشاق السينما 
+    والأفلام الجديدة، مع تصميم متجاوب لجميع الشاشات.
+  </p>
+
+  <h3>خدمات الموقع</h3>
+  <ul>
+    <li>عرض أحدث الأفلام لعام 2025.</li>
+    <li>معلومات كاملة عن الأفلام والبطولة.</li>
+    <li>روابط المشاهدة والتحميل القانونية.</li>
+    <li>تجربة مستخدم متجاوبة وسهلة الاستخدام.</li>
+  </ul>
+
+  <h3>تواصل معنا</h3>
+  <p>
+    البريد الإلكتروني: info@ahmedflex.com <br>
+    تويتر: @AhmedFlex <br>
+    انستغرام: @AhmedFlex
+  </p>
+</main>
+
+<footer>
+  جميع الحقوق محفوظة © 2025 Ahmed Flex
+</footer>
 
 </body>
 </html>
