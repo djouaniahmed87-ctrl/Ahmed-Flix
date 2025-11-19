@@ -1,133 +1,43 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>أفلام 2025</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Tahoma, sans-serif;
-      background: #07070a;
-      color: #fff;
-    }
-    header {
-      background: #111;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      height: 50px;
-    }
-    header h1 {
-      color: #e50914;
-      margin: 0;
-      font-size: 1.8em;
-    }
-    nav {
-      background: #1a1a1a;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    nav input[type="text"] {
-      flex: 1;
-      padding: 8px;
-      border-radius: 5px;
-      border: none;
-    }
-    nav button {
-      padding: 8px 12px;
-      background: #e50914;
-      border: none;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .movies-container {
-      max-width: 1200px;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .movie-card {
-      display: flex;
-      background: #111;
-      border-radius: 10px;
-      overflow: hidden;
-      flex-wrap: wrap;
-    }
-    .movie-card img {
-      max-width: 350px;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-    .movie-details {
-      flex: 1;
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 10px;
-    }
-    .movie-details h2 {
-      margin: 0;
-      color: #e50914;
-    }
-    .movie-details p {
-      color: #ccc;
-      line-height: 1.4;
-    }
-    .trailer {
-      width: 100%;
-      margin-top: 10px;
-    }
-    .trailer iframe {
-      width: 100%;
-      height: 200px;
-      border: none;
-      border-radius: 5px;
-    }
-    .buttons {
-      margin-top: 10px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      padding: 8px 14px;
-      background: #e50914;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      text-align: center;
-    }
-    @media (max-width: 768px) {
-      .movie-card {
-        flex-direction: column;
-        align-items: center;
-      }
-      .movie-details {
-        padding: 10px;
-      }
-      .trailer iframe {
-        height: 180px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أفلام 2025</title>
+<style>
+body { margin:0; font-family:Tahoma, sans-serif; background:#07070a; color:#fff; }
+header { background:#111; padding:15px 20px; display:flex; align-items:center; justify-content: space-between; }
+header img { height:50px; }
+header .site-name { color:#e50914; font-weight:bold; font-size:1.5em; }
+nav { background:#1a1a1a; padding:10px 20px; display:flex; align-items:center; }
+nav input[type="text"] { flex:1; padding:8px; border-radius:5px; border:none; margin-left:10px; }
+nav button { padding:8px 12px; background:#e50914; border:none; color:#fff; border-radius:5px; cursor:pointer; }
+.banner { background-image:url('cinema-2025-banner (1).jpg'); background-size:cover; background-position:center; height:200px; display:flex; align-items:center; justify-content:center; text-align:center; margin-bottom:20px; }
+.banner h2 { background-color: rgba(0,0,0,0.5); padding:10px 15px; border-radius:5px; }
+
+.movie-container { max-width:1000px; margin:20px auto; border-bottom:1px solid #333; padding:15px; display:flex; flex-wrap: wrap; gap:20px; background:#111; border-radius:10px; }
+.movie-image { flex:1; min-width:300px; }
+.movie-image img { width:auto; max-width:100%; height:auto; border-radius:10px; }
+.movie-details { flex:1; min-width:300px; display:flex; flex-direction: column; justify-content: flex-start; }
+.movie-details h2 { color:#e50914; margin-bottom:10px; }
+.movie-details p { color:#ccc; line-height:1.6; margin-bottom:10px; }
+.movie-details iframe { width:100%; height:200px; border:none; border-radius:10px; margin-bottom:10px; }
+.movie-details .btn { display:inline-block; margin-right:10px; margin-top:5px; padding:8px 14px; background:#e50914; color:#fff; border-radius:5px; text-decoration:none; font-weight:bold; }
+
+footer { text-align:center; padding:15px; background:#111; color:#888; margin-top:30px; }
+
+/* متجاوب للشاشات الصغيرة */
+@media (max-width:768px){
+  .movie-container { flex-direction: column; }
+  .movie-details iframe { height:180px; }
+}
+</style>
 </head>
 <body>
 
 <header>
   <img src="movies-2025-logo (2).png" alt="شعار الموقع">
-  <h1>أفلام 2025</h1>
+  <div class="site-name">Ahmed Felix</div>
 </header>
 
 <nav>
@@ -135,185 +45,167 @@
   <button>بحث</button>
 </nav>
 
-<div class="movies-container">
-
-  <!-- Lilo & Stitch -->
-  <div class="movie-card">
-    <img src="images/lilo_and_stitch.jpg" alt="Lilo & Stitch 2025">
-    <div class="movie-details">
-      <h2>Lilo & Stitch (2025)</h2>
-      <p>نسخة حديثة (live‑action) من قصة Lilo و Stitch، من إنتاج ديزني عام 2025.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/Qn4vxdLZfC8" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/5X3U" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/5X3U" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- A Minecraft Movie -->
-  <div class="movie-card">
-    <img src="images/minecraft_the_movie.jpg" alt="A Minecraft Movie 2025">
-    <div class="movie-details">
-      <h2>A Minecraft Movie (2025)</h2>
-      <p>فيلم مغامرة فانتازيا حي مستوحى من لعبة ماينكرافت، بطولة Jason Momoa و Jack Black.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/P9s-FBvB2y4" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/dJpOBCXd" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/dJpOBCXd" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mickey 17 -->
-  <div class="movie-card">
-    <img src="images/mickey_oneseven_ver17.jpg" alt="Mickey 17 2025">
-    <div class="movie-details">
-      <h2>Mickey 17 (2025)</h2>
-      <p>فيلم خيال علمي من إخراج Bong Joon-ho وبطولة Robert Pattinson و Naomi Ackie.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/if86N7GVWc0" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/OlFL" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/OlFL" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mission Impossible -->
-  <div class="movie-card">
-    <img src="images/mission_impossible__the_final_reckoning.jpg" alt="Mission Impossible 2025">
-    <div class="movie-details">
-      <h2>Mission: Impossible – The Final Reckoning (2025)</h2>
-      <p>أكشن وجواسيس، الجزء الأخير لإيثان هانت، بطولة Tom Cruise.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/fsQgc9pCyDU" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/8l45" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/8l45" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- M3GAN 2.0 -->
-  <div class="movie-card">
-    <img src="images/megan_two_point_o_ver2.jpg" alt="M3GAN 2.0 2025">
-    <div class="movie-details">
-      <h2>M3GAN 2.0 (2025)</h2>
-      <p>استمرار قصة الدمية M3GAN مع المزيد من الرعب والتكنولوجيا.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/IYLHdEzsk1s" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/UfNWi5" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/UfNWi5" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- The Conjuring: Last Rites -->
-  <div class="movie-card">
-    <img src="images/conjuring_last_rites_ver2.jpg" alt="The Conjuring 2025">
-    <div class="movie-details">
-      <h2>The Conjuring: Last Rites (2025)</h2>
-      <p>جزء جديد من سلسلة Conjuring مع إد ولورين وارن.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/LQmsD6FVCYI" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/fC7g2R" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/fC7g2R" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Snow White -->
-  <div class="movie-card">
-    <img src="images/snow_white.jpg" alt="Snow White 2025">
-    <div class="movie-details">
-      <h2>Snow White (2025)</h2>
-      <p>إعادة موسيقية خيالية لحكاية سنو وايت من ديزني.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/wsMUQkDTo7o" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/YOIaIqi" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/YOIaIqi" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Jurassic World Rebirth -->
-  <div class="movie-card">
-    <img src="images/jurassic_world_rebirth.jpg" alt="Jurassic World Rebirth 2025">
-    <div class="movie-details">
-      <h2>Jurassic World Rebirth (2025)</h2>
-      <p>مغامرة ديناصورية جديدة من إنتاج Universal.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/70WijHykl-w" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/gzIaP" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/gzIaP" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Ne Zha 2 -->
-  <div class="movie-card">
-    <img src="images/nezha_mo_tong_nao_hai_ver2.jpg" alt="Ne Zha 2 2025">
-    <div class="movie-details">
-      <h2>Ne Zha 2 (2025)</h2>
-      <p>فيلم أنيمي صيني مستوحى من الأساطير الصينية.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/6k_V-1Q3JsY" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/CbE5y" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://shrinkme.click/CbE5y" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- The Smashing Machine -->
-  <div class="movie-card">
-    <img src="images/smashing_machine.jpg" alt="The Smashing Machine 2025">
-    <div class="movie-details">
-      <h2>The Smashing Machine (2025)</h2>
-      <p>فيلم مغامرة وإثارة متوقع صدوره في 2025.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/aRpnP3LZ99g" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/09kigc" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://www.example.com/download/smashing-machine" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Wicked: For Good -->
-  <div class="movie-card">
-    <img src="images/wicked_for_good.jpg" alt="Wicked For Good 2025">
-    <div class="movie-details">
-      <h2>Wicked: For Good (2025)</h2>
-      <p>فيلم موسيقي وفانتازيا لعام 2025.</p>
-      <div class="trailer">
-        <iframe src="https://www.youtube.com/embed/vt98AlBDI9Y" allowfullscreen></iframe>
-      </div>
-      <div class="buttons">
-        <a href="https://shrinkme.click/n5qT" class="btn" target="_blank">مشاهدة</a>
-        <a href="https://www.example.com/download/wicked-for-good" class="btn" target="_blank">تحميل</a>
-      </div>
-    </div>
-  </div>
-
+<div class="banner">
+  <h2>مرحباً بكم في صفحة الأفلام 2025 🎬</h2>
 </div>
+
+<!-- Lilo & Stitch -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/lilo_and_stitch.jpg" alt="Lilo & Stitch 2025">
+  </div>
+  <div class="movie-details">
+    <h2>Lilo & Stitch (2025)</h2>
+    <p>نسخة حديثة من قصة Lilo و Stitch، من إنتاج ديزني 2025.</p>
+    <iframe src="https://www.youtube.com/embed/Qn4vxdLZfC8" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/5X3U" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://shrinkme.click/5X3U" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- A Minecraft Movie -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/minecraft_the_movie.jpg" alt="A Minecraft Movie 2025">
+  </div>
+  <div class="movie-details">
+    <h2>A Minecraft Movie (2025)</h2>
+    <p>مغامرة فانتازيا حي مستوحى من لعبة ماينكرافت، بطولة Jason Momoa وJack Black.</p>
+    <iframe src="https://www.youtube.com/embed/P9s-FBvB2y4" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/dJpOBCXd" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://shrinkme.click/dJpOBCXd" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- Mickey 17 -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/mickey_oneseven_ver17.jpg" alt="Mickey 17 2025">
+  </div>
+  <div class="movie-details">
+    <h2>Mickey 17 (2025)</h2>
+    <p>فيلم خيال علمي من إخراج Bong Joon-ho وبطولة Robert Pattinson و Naomi Ackie.</p>
+    <iframe src="https://www.youtube.com/embed/if86N7GVWc0" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/OlFL" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://shrinkme.click/OlFL" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- Mission Impossible -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/mission_impossible__the_final_reckoning.jpg" alt="Mission: Impossible 2025">
+  </div>
+  <div class="movie-details">
+    <h2>Mission: Impossible – The Final Reckoning (2025)</h2>
+    <p>أكشن وجواسيس، الجزء الأخير لإيثان هانت، بطولة Tom Cruise.</p>
+    <iframe src="https://www.youtube.com/embed/fsQgc9pCyDU" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/8l45" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://shrinkme.click/8l45" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- M3GAN 2.0 -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/megan_two_point_o_ver2.jpg" alt="M3GAN 2.0 2025">
+  </div>
+  <div class="movie-details">
+    <h2>M3GAN 2.0 (2025)</h2>
+    <p>استمرار قصة الدمية M3GAN مع المزيد من الرعب والتكنولوجيا.</p>
+    <iframe src="https://www.youtube.com/embed/IYLHdEzsk1s" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/UfNWi5" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://shrinkme.click/UfNWi5" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- The Conjuring: Last Rites -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/conjuring_last_rites_ver2.jpg" alt="The Conjuring: Last Rites 2025">
+  </div>
+  <div class="movie-details">
+    <h2>The Conjuring: Last Rites (2025)</h2>
+    <p>جزء جديد من سلسلة Conjuring مع إد ولورين وارن.</p>
+    <iframe src="https://www.youtube.com/embed/LQmsD6FVCYI" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/fC7g2R" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://shrinkme.click/fC7g2R" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- Snow White -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/snow_white.jpg" alt="Snow White 2025">
+  </div>
+  <div class="movie-details">
+    <h2>Snow White (2025)</h2>
+    <p>إعادة موسيقية خيالية لحكاية سنو وايت من ديزني.</p>
+    <iframe src="https://www.youtube.com/embed/wsMUQkDTo7o" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/YOIaIqi" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://www.shrinkme.click/YOIaIqi" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- Jurassic World Rebirth -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/jurassic_world_rebirth.jpg" alt="Jurassic World Rebirth 2025">
+  </div>
+  <div class="movie-details">
+    <h2>Jurassic World Rebirth (2025)</h2>
+    <p>مغامرة ديناصورية جديدة من إنتاج Universal.</p>
+    <iframe src="https://www.youtube.com/embed/70WijHykl-w" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/gzIaP" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://shrinkme.click/gzIaP" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- Ne Zha 2 -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/nezha_mo_tong_nao_hai_ver2.jpg" alt="Ne Zha 2 2025">
+  </div>
+  <div class="movie-details">
+    <h2>Ne Zha 2 (2025)</h2>
+    <p>فيلم أنيمي صيني مستوحى من الأساطير الصينية.</p>
+    <iframe src="https://www.youtube.com/embed/6k_V-1Q3JsY" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/CbE5y" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://shrinkme.click/CbE5y" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- The Smashing Machine -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/smashing_machine.jpg" alt="The Smashing Machine 2025">
+  </div>
+  <div class="movie-details">
+    <h2>The Smashing Machine (2025)</h2>
+    <p>فيلم مغامرة وإثارة متوقع صدوره في 2025.</p>
+    <iframe src="https://www.youtube.com/embed/aRpnP3LZ99g" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/09kigc" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://www.shrinkme.click/09kigc" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<!-- Wicked: For Good -->
+<div class="movie-container">
+  <div class="movie-image">
+    <img src="images/wicked_for_good.jpg" alt="Wicked: For Good 2025">
+  </div>
+  <div class="movie-details">
+    <h2>Wicked: For Good (2025)</h2>
+    <p>فيلم موسيقي وفانتازيا لعام 2025.</p>
+    <iframe src="https://www.youtube.com/embed/vt98AlBDI9Y" allowfullscreen></iframe>
+    <a href="https://shrinkme.click/n5qT" class="btn" target="_blank">مشاهدة الفيلم كامل</a>
+    <a href="https://www.shrinkme.click/n5qT" class="btn" target="_blank">تحميل الفيلم</a>
+  </div>
+</div>
+
+<footer>
+جميع الحقوق محفوظة © 2025 Ahmed Djouani
+</footer>
 
 </body>
 </html>
