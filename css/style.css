@@ -1,208 +1,189 @@
-/* إعدادات عامة */
-body {
+/* style.css - كامل تنسيق الموقع */
+
+/* القاعدة العامة */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Tahoma, sans-serif;
-  background: #07070a;
-  color: #fff;
-  direction: rtl;
+  padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+body {
+  font-family: Tahoma, sans-serif;
+  background-color: #07070a;
+  color: #fff;
+  line-height: 1.6;
 }
 
 /* شريط التنقل */
 header {
-  background: rgba(0, 0, 0, 0.65);
-  padding: 10px 20px;
-  backdrop-filter: blur(6px);
-}
-
-.nav-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #111;
 }
 
-.logo {
+header img {
   height: 50px;
 }
 
-.site-name {
+header h1 {
+  color: #e50914;
   font-size: 1.8em;
-  color: #ff253a;
-  font-weight: bold;
-  margin-left: 20px;
 }
 
-.nav-links {
-  list-style: none;
+/* قائمة الصفحات */
+nav {
+  background-color: rgba(26,26,26,0.95);
+  padding: 10px 30px;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-links a {
+nav .nav-links a {
   color: #fff;
-  font-size: 1.1em;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-.nav-links a:hover {
-  color: #ff253a;
+nav .nav-links a:hover {
+  color: #e50914;
 }
 
 /* شريط البحث */
-.search-bar {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+nav input[type="text"] {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
 }
 
-.search-bar input {
-  flex: 1;
+nav button {
   padding: 8px 12px;
-  border-radius: 6px;
-  border: none;
-  font-size: 1em;
-}
-
-.search-bar button {
-  background: #ff253a;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 6px;
+  background: #e50914;
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
   cursor: pointer;
-  font-weight: bold;
-}
-
-.search-bar button:hover {
-  background: #d31326;
 }
 
 /* البانر */
 .banner {
-  height: 260px;
+  background-image: url('../cinema-2025-banner (1).jpg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
   text-align: center;
 }
 
 .banner h2 {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-size: 1.9em;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.5em;
 }
 
-/* قائمة الأفلام */
-.movies-list {
+/* الحاوية الرئيسية للأفلام */
+.movies-container {
   max-width: 1200px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  padding: 15px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 15px;
 }
 
 /* بطاقة الفيلم */
 .movie-card {
-  display: flex;
-  gap: 25px;
-  background: #111;
+  position: relative;
+  background-color: #111;
   border-radius: 10px;
   overflow: hidden;
-  padding: 15px;
-  border: 1px solid #222;
 }
 
-/* صورة الفيلم */
-.movie-image {
-  width: 350px;
-  height: 220px;
-  background-size: cover;
-  background-position: center;
+.movie-card img {
+  width: 100%;
+  display: block;
   border-radius: 10px;
-  position: relative;
 }
 
-/* Overlay النص فوق الصورة */
-.movie-image::after {
-  content: "";
+.movie-info {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-}
-
-/* معلومات الفيلم */
-.movie-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
 }
 
 .movie-info h3 {
-  margin: 0 0 10px;
-  color: #ff253a;
-  font-size: 1.6em;
+  color: #e50914;
+  margin-bottom: 10px;
 }
 
 .movie-info p {
   color: #ccc;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-/* التريلر */
-.movie-info iframe {
-  width: 340px;
-  height: 190px;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
 }
 
 /* الأزرار */
-.buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  background: #ff253a;
-  padding: 10px 20px;
-  border-radius: 6px;
+.movie-info .btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #e50914;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
+  margin-right: 5px;
   transition: 0.3s;
 }
 
-.btn:hover {
-  background: #c41124;
+.movie-info .btn:hover {
+  background: #b4060e;
 }
 
-/* متجاوب للجوال */
-@media(max-width: 820px) {
-  .movie-card {
+/* الفوتر */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #111;
+  color: #888;
+  margin-top: 30px;
+}
+
+/* تجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  nav {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
   }
-
-  .movie-image {
+  nav input[type="text"] {
     width: 100%;
-    height: 260px;
+    margin-bottom: 10px;
   }
-
-  .movie-info iframe {
-    width: 100%;
+  .banner h2 {
+    font-size: 1.2em;
   }
+  .movie-info p {
+    font-size: 0.85em;
+  }
+}
 
-  .buttons {
-    justify-content: center;
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+  nav .nav-links a {
+    margin-left: 10px;
+    font-size: 0.9em;
   }
 }
