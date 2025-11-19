@@ -1,147 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Flex - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أفلام 2025</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- ▬▬▬▬ شريط التنقل ▬▬▬▬ -->
-    <header class="navbar">
-        <div class="logo">
-            <img src="movies-2025-logo (2).png" alt="Logo">
-        </div>
+<!-- شريط أعلى الصفحة -->
+<header class="site-header">
+  <div class="logo">
+    <img src="movies-2025-logo (2).png" alt="شعار الموقع">
+  </div>
+  <div class="site-name">Ahmed Flex</div>
+  <nav class="main-nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="movies.html">الأفلام</a>
+    <a href="series.html">المسلسلات</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
 
-        <div class="site-name">Ahmed Flex</div>
+<!-- بانر خلفي وشريط البحث -->
+<section class="banner-section" style="background-image: url('cinema-2025-banner (1).jpg');">
+  <div class="banner-overlay">
+    <h1>مرحباً بكم في موقع أفلام 2025 🎬</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="ابحث عن فيلم...">
+      <button>بحث</button>
+    </div>
+  </div>
+</section>
 
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="movies.html">Movies</a>
-            <a href="series.html">Series</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
+<!-- قسم الأفلام -->
+<section class="movies-section">
+  <div class="movies-container">
+    <!-- بطاقة فيلم -->
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/lilo_and_stitch.jpg');">
+        <h3>Lilo & Stitch (2025)</h3>
+        <p>نسخة حديثة من قصة Lilo و Stitch، من إنتاج ديزني عام 2025.</p>
+        <a href="movies.html#lilo-stitch" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-    <!-- ▬▬▬▬ بانر + بحث ▬▬▬▬ -->
-    <section class="banner" style="background-image: url('cinema-2025-banner (1).jpg');">
-        <div class="search-box">
-            <input type="text" placeholder="Search for movies...">
-            <button>Search</button>
-        </div>
-    </section>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/minecraft_the_movie.jpg');">
+        <h3>A Minecraft Movie (2025)</h3>
+        <p>فيلم مغامرة فانتازيا حي مستوحى من لعبة ماينكرافت، بطولة Jason Momoa و Jack Black.</p>
+        <a href="movies.html#minecraft-movie" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-    <!-- ▬▬▬▬ شبكة الأفلام ▬▬▬▬ -->
-    <section class="movies-grid">
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/mickey_oneseven_ver17.jpg');">
+        <h3>Mickey 17 (2025)</h3>
+        <p>فيلم خيال علمي كوميدي حول نسخة مستنسخة من ميكي تُرسل في مهمات خطيرة.</p>
+        <a href="movies.html#mickey-17" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-        <!-- مثال فيلم  -->
-        <div class="movie-card">
-            <img src="images/conjuring_last_rites_ver2.jpg" alt="">
-            <h2>The Conjuring – Last Rites</h2>
-            <p>
-                الفصل الأخير من سلسلة الرعب الأسطورية، حيث تواجه لورين وارن كياناً شيطانياً 
-                جديداً أكثر شراسة وخطورة من أي وقت مضى.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/mission_impossible__the_final_reckoning.jpg');">
+        <h3>Mission: Impossible – The Final Reckoning (2025)</h3>
+        <p>فيلم أكشن وجاسوسية من سلسلة Mission: Impossible، بطولة Tom Cruise.</p>
+        <a href="movies.html#mission-impossible" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-        <div class="movie-card">
-            <img src="images/jurassic_world_rebirth.jpg" alt="">
-            <h2>Jurassic World – Rebirth</h2>
-            <p>
-                عودة الديناصورات بشكل غير مسبوق بعد تجربة جينية خطيرة أعادت إحياء أنواع 
-                انقرضت منذ ملايين السنين.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/megan_two_point_o_ver2.jpg');">
+        <h3>M3GAN 2.0 (2025)</h3>
+        <p>استمرار قصة الدمية M3GAN في إصدار 2025 مع الكثير من الرعب والتكنولوجيا.</p>
+        <a href="movies.html#m3gan-2" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-        <div class="movie-card">
-            <img src="images/lilo_and_stitch.jpg" alt="">
-            <h2>Lilo & Stitch</h2>
-            <p>
-                مغامرة جديدة بين ليلو وستيتش حيث يواجهان تهديداً فضائياً قد يغير حياتهما للأبد.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/conjuring_last_rites_ver2.jpg');">
+        <h3>The Conjuring: Last Rites (2025)</h3>
+        <p>جزء جديد من سلسلة Conjuring مع إد ولورين وارن.</p>
+        <a href="movies.html#conjuring-last-rites" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-        <div class="movie-card">
-            <img src="images/megan_two_point_o_ver2.jpg" alt="">
-            <h2>Megan 2.0</h2>
-            <p>
-                الدمية الأكثر تطوراً وذكاءً تعود في إصدار جديد يحمل قدرات لم يكن أحد يتوقعها.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/snow_white.jpg');">
+        <h3>Snow White (2025)</h3>
+        <p>إعادة موسيقية خيالية لحكاية سنو وايت من ديزني.</p>
+        <a href="movies.html#snow-white" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-        <div class="movie-card">
-            <img src="images/mickey_oneseven_ver17.jpg" alt="">
-            <h2>Mickey 17</h2>
-            <p>
-                استنساخ شرير جديد يُطلق ليحلّ محلّ كل نسخة سابقة، لكن هذه النسخة ترفض أن تختفي.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/jurassic_world_rebirth.jpg');">
+        <h3>Jurassic World Rebirth (2025)</h3>
+        <p>مغامرة ديناصورية جديدة من إنتاج Universal.</p>
+        <a href="movies.html#jurassic-world-rebirth" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-        <div class="movie-card">
-            <img src="images/minecraft_the_movie.jpg" alt="">
-            <h2>Minecraft – The Movie</h2>
-            <p>
-                مغامرة سينمائية داخل عالم ماينكرافت المليء بالمكعبات والأسرار والمخاطر.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/nezha_mo_tong_nao_hai_ver2.jpg');">
+        <h3>Ne Zha 2 (2025)</h3>
+        <p>فيلم أنيمي صيني مستوحى من الأساطير الصينية.</p>
+        <a href="movies.html#ne-zha-2" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-        <div class="movie-card">
-            <img src="images/mission_impossible__the_final_reckoning.jpg" alt="">
-            <h2>Mission Impossible – Final Reckoning</h2>
-            <p>
-                آخر مهمة لإيثان هانت حيث يواجه عدواً لا يُقهر يهدد مستقبل العالم.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/smashing_machine.jpg');">
+        <h3>The Smashing Machine (2025)</h3>
+        <p>فيلم مغامرة وإثارة متوقع صدوره في 2025.</p>
+        <a href="movies.html#smashing-machine" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
 
-        <div class="movie-card">
-            <img src="images/nezha_mo_tong_nao_hai_ver2.jpg" alt="">
-            <h2>Nezha 2</h2>
-            <p>
-                ملحمة أسطورية جديدة لنيتشا في مواجهة آلهة الظلام.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+    <div class="movie-card">
+      <div class="movie-bg" style="background-image: url('images/wicked_for_good.jpg');">
+        <h3>Wicked: For Good (2025)</h3>
+        <p>فيلم موسيقي وفانتازيا لعام 2025.</p>
+        <a href="movies.html#wicked-for-good" class="btn">مشاهدة الفيلم</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="movie-card">
-            <img src="images/smashing_machine.jpg" alt="">
-            <h2>Smashing Machine</h2>
-            <p>
-                قصة واقعية لمقاتل MMA يحاول العودة بعد سلسلة من الهزائم والانهيارات.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
+<footer>
+  جميع الحقوق محفوظة © 2025 Ahmed Djouani
+</footer>
 
-        <div class="movie-card">
-            <img src="images/snow_white.jpg" alt="">
-            <h2>Snow White</h2>
-            <p>
-                إعادة تخيّل عصرية لقصة بياض الثلج الكلاسيكية بمؤثرات جديدة وتغييرات جريئة.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
-
-        <div class="movie-card">
-            <img src="images/wicked_for_good.jpg" alt="">
-            <h2>Wicked – For Good</h2>
-            <p>
-                صراع ساحرتين في عالم سحري يختبر معنى الخير والشر من جديد.
-            </p>
-            <a href="movies.html" class="btn">مشاهدة التفاصيل</a>
-        </div>
-
-    </section>
-
+<script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
